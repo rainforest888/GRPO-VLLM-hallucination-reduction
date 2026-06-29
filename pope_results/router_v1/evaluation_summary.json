@@ -1,0 +1,35 @@
+{
+  "random": {
+    "TP": 1302,
+    "FP": 31,
+    "TN": 1469,
+    "FN": 198,
+    "Accuracy": 0.9237,
+    "Precision": 0.9767,
+    "Recall": 0.868,
+    "F1": 0.9192,
+    "Yes_Ratio": 0.4443
+  },
+  "popular": {
+    "TP": 1299,
+    "FP": 124,
+    "TN": 1376,
+    "FN": 201,
+    "Accuracy": 0.8917,
+    "Precision": 0.9129,
+    "Recall": 0.866,
+    "F1": 0.8888,
+    "Yes_Ratio": 0.4743
+  },
+  "adversarial": {
+    "TP": 1297,
+    "FP": 196,
+    "TN": 1304,
+    "FN": 203,
+    "Accuracy": 0.867,
+    "Precision": 0.8687,
+    "Recall": 0.8647,
+    "F1": 0.8667,
+    "Yes_Ratio": 0.4977
+  }
+}

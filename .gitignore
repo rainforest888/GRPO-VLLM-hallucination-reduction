@@ -1,0 +1,29 @@
+# Checkpoints & model weights
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Large logs
+*.txt
+!requirements.txt
+
+# IDE
+.vscode/
+.idea/
+
+# Conda / venv
+venv/
+.venv/
+conda/
+
+# OS
+.DS_Store
+Thumbs.db
