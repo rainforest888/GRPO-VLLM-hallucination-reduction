@@ -1,0 +1,33 @@
+{
+  "config": {
+    "n_sample": 1000,
+    "k_random": 30,
+    "sparse_k": 3
+  },
+  "baseline": {
+    "correct": 881,
+    "wrong": 119,
+    "acc": 0.881
+  },
+  "A_adaiat": {
+    "fixed": 7
+  },
+  "B_uac": {
+    "fixed": 12
+  },
+  "C_random": {
+    "any_correct": 35,
+    "total_correct": 260
+  },
+  "union": {
+    "AB": 14,
+    "AC": 35,
+    "BC": 35,
+    "ABC": 35
+  },
+  "disjoint": {
+    "only_A": 0,
+    "only_B": 0,
+    "only_C": 21
+  }
+}
