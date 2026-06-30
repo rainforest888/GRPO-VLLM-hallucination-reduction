@@ -216,6 +216,29 @@ G:\sample\Qwen3vl\router_project\
 
 ---
 
+## 10. CAI+BRACS (2026-06-30)
+
+**CAI v2 calibration**: 50 images, caption vs non-caption → per-layer o_proj output offsets (norms 2-85, largest at deeper layers)
+
+**CAI v2 alpha sweep** (200 adversarial): Best α=0.05, acc=0.860, Δ=−1.30%. ALL alphas ≤ baseline.
+
+**结论**: CAI via o_proj steering 不可用。Caption attn offset norms (40-85) 太大，即使微小偏移也破坏 yes/no 决策。
+
+## 11. 所有方法的诚实汇总
+
+| 方法 | Adversarial Δ | 状态 |
+|------|:---:|------|
+| AdaIAT-U L15 | +0.20% | 唯一正向 |
+| UAC L15 | −0.03% | 噪声级 |
+| VCD (all γ) | ≤ 0 | 全负 |
+| CASAL/LIME | −1~4% | 不可用 |
+| VHR/UAC+VHR | −2~4% | 不可用 |
+| GRPO v2 Router | −1.8% | 退化 |
+| Oracle 3×3×3 | +1.8% | 上界 |
+| **CAI v2** | **−1.3%** | **不可用** |
+
+**贯穿规律**: 2B 模型在 POPE 上决策边界已高度校准（87.3%），任何 training-free 全局偏移都会引入等量反例错误。需要更强候选策略或放弃 POPE 天花板。
+
 ## 9. 恢复指南
 
 下次打开项目时:
